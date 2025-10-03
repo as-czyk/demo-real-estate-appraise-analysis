@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { AlertCircle, Info, ExternalLink } from "lucide-react";
+import { usePageStore } from "@/store/PageStore";
 
 interface Finding {
   id: string;
@@ -111,9 +112,9 @@ const severityConfig = {
 };
 
 export function FindingsList() {
+  const { page, setPage } = usePageStore();
   const handleJumpToPage = (page: number) => {
-    console.log("[v0] Jump to page:", page);
-    // This will be implemented to sync with PDF viewer
+    setPage(page);
   };
 
   return (
@@ -122,7 +123,7 @@ export function FindingsList() {
         <CardTitle className="text-lg">Gefundene Probleme</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 p-0">
-        <ScrollArea className="h-[calc(100vh-280px)]">
+        <ScrollArea className="h-[calc(100vh-180px)]">
           <div className="space-y-4 p-4">
             {mockFindings.map((finding) => {
               const config = severityConfig[finding.severity];

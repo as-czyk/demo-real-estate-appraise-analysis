@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { usePageStore } from "@/store/PageStore";
 import { ChevronLeft, ChevronRight, Loader } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -19,7 +20,7 @@ if (typeof window !== "undefined") {
 
 const ViewerClient = ({ documentUrl }: { documentUrl: string }) => {
   const [numPages, setNumPages] = useState<number>();
-  const [page, setPage] = useState<number>(1);
+  const { page, setPage } = usePageStore();
   const [pdfFile, setPdfFile] = useState<string | null>(null);
 
   // Load PDF file on component mount

@@ -3,6 +3,7 @@ import { AppSidebar } from "@/lib/AppSidebar";
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const soraFont = Sora({
   variable: "--font-sora",
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={`${soraFont.variable} antialiased font-sora`}>
+        <Toaster />
         <main className="flex h-screen w-screen overflow-hidden">
           <nav className="h-full flex-shrink-0">
             <SidebarProvider>

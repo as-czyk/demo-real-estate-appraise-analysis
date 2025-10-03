@@ -36,7 +36,7 @@ export function Logo({
 
   return (
     <Image
-      src={`/company/${logoName}`}
+      src={`/company${logoName}`}
       alt={alt}
       width={width}
       height={height}

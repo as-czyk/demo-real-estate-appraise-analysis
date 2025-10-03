@@ -15,6 +15,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { routes } from "./routes";
+import { CustomerData } from "./constant";
 
 // Menu items.
 const items = [
@@ -24,14 +25,14 @@ const items = [
     icon: Home,
   },
   {
-    title: "Analyse",
-    url: routes.analyse,
-    icon: Activity,
-  },
-  {
     title: "Regeln",
     url: routes.regeln,
     icon: RulerIcon,
+  },
+  {
+    title: "Analyse",
+    url: routes.analyse,
+    icon: Activity,
   },
   {
     title: "Review",
@@ -45,7 +46,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <div className="flex items-center gap-3 p-4">
-          <Logo logoName="company-logo.png" width={64} height={64} />
+          <Logo logoName={CustomerData.companyLogo} width={40} height={40} />
         </div>
         <SidebarGroup>
           <SidebarGroupContent>

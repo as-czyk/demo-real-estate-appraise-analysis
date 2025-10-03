@@ -23,7 +23,7 @@ export function WelcomeMessage({
         <Avatar className="h-20 w-20">
           {profilePicName && (
             <AvatarImage
-              src={`/profiles/${profilePicName}`}
+              src={`/profile/${profilePicName}`}
               alt={`${displayName} profile`}
             />
           )}
@@ -35,7 +35,7 @@ export function WelcomeMessage({
       </div>
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-balance">
-          Willkommen zurück, {displayName}!
+          Willkommen, {displayName}!
         </h1>
         <p className="text-muted-foreground">
           Hier ist Ihre Übersicht für heute

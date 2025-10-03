@@ -13,8 +13,8 @@ interface LogoProps {
 
 export function Logo({
   logoName,
-  width = 64,
-  height = 64,
+  width = 32,
+  height = 32,
   className = "rounded",
   alt = "Logo",
 }: LogoProps) {
@@ -36,7 +36,7 @@ export function Logo({
 
   return (
     <Image
-      src={`/logos/${logoName}`}
+      src={`/company/${logoName}`}
       alt={alt}
       width={width}
       height={height}

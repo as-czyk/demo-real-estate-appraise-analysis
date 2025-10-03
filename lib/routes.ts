@@ -1,6 +1,6 @@
 export const routes = {
-  dashboard: "/dashboard",
-  regeln: "/regeln",
-  analyse: "/analyse",
-  review: "/review",
+  dashboard: "/a/dashboard",
+  regeln: "/a/regeln",
+  analyse: "/a/analyse",
+  review: "/a/review",
 };

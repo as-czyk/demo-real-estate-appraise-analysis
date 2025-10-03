@@ -24,6 +24,7 @@ import {
   ClipboardList,
   ScrollText,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface Analysis {
   uuid: string;
@@ -108,9 +109,11 @@ const appraisalTypeConfig = {
 };
 
 export function AnalysisTable() {
+  const router = useRouter();
+
   const handleViewReview = (uuid: string) => {
     // This will be implemented later
-    console.log("[v0] Navigate to review page for:", uuid);
+    router.push(`/r/${uuid}`);
   };
 
   return (

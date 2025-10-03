@@ -25,18 +25,7 @@ export default function RootLayout({
     <html lang="de">
       <body className={`${soraFont.variable} antialiased font-sora`}>
         <Toaster />
-        <main className="flex h-screen w-screen overflow-hidden">
-          <nav className="h-full flex-shrink-0">
-            <SidebarProvider>
-              <AppSidebar />
-            </SidebarProvider>
-          </nav>
-          <section className="flex-1 h-full w-full overflow-auto p-8">
-            <div className="flex justify-start w-full">
-              <div className="space-y-6 w-full">{children}</div>
-            </div>
-          </section>
-        </main>
+        {children}
       </body>
     </html>
   );

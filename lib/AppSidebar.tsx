@@ -1,7 +1,8 @@
-import { Activity, BarChart, CloudUpload, Home } from "lucide-react";
+import { Activity, BarChart, Home, RulerIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import agentenschmiede from "@/public/logo_agentenschmiede.png";
+import { Logo } from "@/components/Logo";
 
 import {
   Sidebar,
@@ -30,7 +31,7 @@ const items = [
   {
     title: "Regeln",
     url: routes.regeln,
-    icon: CloudUpload,
+    icon: RulerIcon,
   },
   {
     title: "Review",
@@ -44,9 +45,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <div className="flex items-center gap-3 p-4">
-          <div className="w-16 h-16 bg-gray-200 rounded flex items-center justify-center text-gray-500 text-sm">
-            Logo
-          </div>
+          <Logo logoName="company-logo.png" width={64} height={64} />
         </div>
         <SidebarGroup>
           <SidebarGroupContent>

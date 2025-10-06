@@ -69,7 +69,7 @@ const ViewerClient = ({ documentUrl }: { documentUrl: string }) => {
         <div className="w-full h-full bg-muted rounded-lg flex items-center justify-center">
           {pdfFile && (
             <Document
-              file={"http://localhost:3000" + pdfFile}
+              file={pdfFile}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={
                 <div className="flex items-center justify-center h-screen">

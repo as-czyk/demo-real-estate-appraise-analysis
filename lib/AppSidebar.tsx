@@ -45,11 +45,8 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-        <div className="flex items-center gap-3 p-4">
-          <Logo logoName={CustomerData.companyLogo} width={40} height={40} />
-        </div>
         <SidebarGroup>
-          <SidebarGroupContent>
+          <SidebarGroupContent className="mt-16">
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>

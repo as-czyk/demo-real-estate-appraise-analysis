@@ -16,37 +16,22 @@ export function Value() {
           <div className="flex items-center gap-4">
             <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-border">
               <Image
-                src={"/profile" + CustomerData.profileLogo}
+                src={"/profile/aron.png"}
                 alt="Client Profile"
                 fill
                 className="object-cover"
               />
             </div>
             <div>
-              <p className="text-lg font-semibold">
-                {CustomerData.firstName} {CustomerData.lastName}
-              </p>
+              <p className="text-lg font-semibold">Aron Scheffczyk</p>
               <div className="mt-1 h-8 w-32 relative">
                 <Image
-                  src={"/company" + CustomerData.companyLogo}
+                  src="/logo_agentenschmiede.png"
                   alt="Client Logo"
                   fill
                   className="object-contain object-left"
                 />
               </div>
-            </div>
-          </div>
-
-          {/* Provider Side */}
-          <div className="text-right">
-            <p className="text-lg font-semibold">Aron Scheffczyk</p>
-            <div className="mt-1 h-8 w-32 relative ml-auto">
-              <Image
-                src="/logo_agentenschmiede.png"
-                alt="Provider Logo"
-                fill
-                className="object-contain object-right"
-              />
             </div>
           </div>
         </div>
